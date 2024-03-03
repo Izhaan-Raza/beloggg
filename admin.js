@@ -1,10 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('savePostBtn').addEventListener('click', function () {
-        const titleInput = document.getElementById('postTitle');
-        const contentInput = document.getElementById('postContent');
+    const savePostBtn = document.getElementById('savePostBtn');
 
-        const title = titleInput.value.trim();
-        const content = contentInput.value.trim();
+    savePostBtn.addEventListener('click', function () {
+        const title = prompt('Enter the title of the new post:');
+        const content = prompt('Enter the content of the new post:');
 
         if (title && content) {
             const newPost = {
@@ -13,12 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 content
             };
 
-            // Call the savePostToGitHub function from main.js with the new post data
-            savePostToGitHub(newPost);
-
-            // Clear input fields after saving
-            titleInput.value = '';
-            contentInput.value = '';
+            // Log the new post data to the console
+            console.log('New Post:', newPost);
         } else {
             alert('Please enter both title and content.');
         }
