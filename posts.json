@@ -1,0 +1,12 @@
+[
+    {
+        "title": "Sample Blog Post 1",
+        "date": "March 1, 2024",
+        "content": "<p>This is the content of the first blog post.</p>"
+    },
+    {
+        "title": "Sample Blog Post 2",
+        "date": "March 2, 2024",
+        "content": "<p>This is the content of the second blog post.</p>"
+    }
+]

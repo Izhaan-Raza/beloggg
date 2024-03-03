@@ -4,34 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin - Your Personal Blog</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Admin Page</title>
 </head>
 
 <body>
-    <header>
-        <h1>Admin - Your Personal Blog</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="admin.html">Admin</a>
-        </nav>
-    </header>
+    <h1>Admin Page</h1>
 
-    <main>
-        <form id="post-form">
-            <label for="post-title">Title:</label>
-            <input type="text" id="post-title" required>
+    <form id="postForm">
+        <label for="postTitle">Title:</label>
+        <input type="text" id="postTitle" required>
 
-            <label for="post-content">Content:</label>
-            <textarea id="post-content" required></textarea>
+        <label for="postContent">Content:</label>
+        <textarea id="postContent" required></textarea>
 
-            <button type="submit">Post</button>
-        </form>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Your Name</p>
-    </footer>
+        <button type="button" id="savePostBtn">Save New Post</button>
+    </form>
 
     <script src="admin.js" defer></script>
 </body>

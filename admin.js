@@ -1,30 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const postForm = document.getElementById('post-form');
+    document.getElementById('savePostBtn').addEventListener('click', function () {
+        const title = prompt('Enter the title of the new post:');
+        const content = prompt('Enter the content of the new post:');
 
-    postForm.addEventListener('submit', function (event) {
-        event.preventDefault();
+        if (title && content) {
+            const newPost = {
+                title,
+                date: new Date().toDateString(),
+                content
+            };
 
-        const title = document.getElementById('post-title').value;
-        const content = document.getElementById('post-content').value;
-        const date = new Date().toLocaleDateString();
-
-        const newPost = {
-            title,
-            date,
-            content,
-        };
-
-        // Call a function to save the post to your GitHub repo (to be implemented later)
-        savePost(newPost);
-
-        // Optionally, redirect to the home page after posting
-        window.location.href = 'index.html';
+            // Call the savePostToGitHub function from main.js with the new post data
+            savePostToGitHub(newPost);
+        } else {
+            alert('Please enter both title and content.');
+        }
     });
-
-    // Function to save the post (to be implemented later)
-    function savePost(post) {
-        // This is where you'll implement the logic to save the post to your GitHub repo
-        // For now, you can log the post to the console
-        console.log('Post to be saved:', post);
-    }
 });
